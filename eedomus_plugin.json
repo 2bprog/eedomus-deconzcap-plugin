@@ -1,0 +1,156 @@
+{
+	"plugin_id": "bbdeconzcap",
+	"name_fr": "deConz Capteurs",
+	"icon": "deconzcap.png",
+	"version": "0.0.1",
+	"creation_date": "2019-12-23",
+	"modification_date": "2019-12-23",
+	"author": "Benjamin B. (benj70b)",
+	"description_fr": "Créer un périphérique deConz de type capteur",
+	"description_en": "",
+	"description_es": "",
+	"description_it": "",
+	"description_de": "",
+	"forum_link": "",
+	"parameters": [{
+			"parameter": "DZIP",
+			"description": "IP locale du serveur deConz API Rest avec le numéro de port (192.168.0.XX:YYYY)",
+			"xtype": "textfield",
+			"default_value": "10.66.254.101:8090",
+			"field": "width:130, allowBlank:false, maskRe:/[0-9.:]/, regex:/^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])\\:([0-9]{2}[0-9]?[0-9]?)$/, regexText:'Adresse IP invalide [0-255].[0-255].[0-255]:[0-255]'"
+		},
+		{
+			"parameter": "DZAPIKEY",
+			"description": "Clef API du serveur deConz",
+			"xtype": "textfield",
+			"default_value": "FB5A4E6BBF",
+			"field": "width:130, allowBlank: false , maxLength:40, minLength:10"
+		},
+
+		{
+			"parameter": "DZIDDECONZ",
+			"description": "Identifiant deConz (sensor)",
+			"xtype": "numberfield",
+			"default_value": "",
+			"field": "minValue:1, allowDecimals:false, width:60, allowBlank:false"
+		},
+		{
+			"parameter": "DZIDLIST",
+			"description": "",
+			"xtype": "displayfield",
+			"field": "style: 'padding: 3px;', value: 'Cliquez <a href=\\'javascript:window.open(\"https://secure.eedomus.com/script_proxy/?exec=2B_deconzlist.php&ip=\"+document.getElementById(\"periph_param[`DZIP`]\").value + \"&key=sensors&cmd=list\" + \"&p1=\"  +document.getElementById(\"periph_param[`DZTYPE`]\").value + \"&p2=\", \"width=600,height=400\");\\'>ici pour lister les identifiants</a>'"
+		},
+		{
+			"parameter": "DZTEMP",
+			"description": "Capteur de température : ",
+			"xtype": "checkbox",
+			"field": "style: 'margin-top: 6px;', checked: true"
+		},
+		{
+			"parameter": "DZHUM",
+			"description": "Capteur d'humidité : ",
+			"xtype": "checkbox",
+			"field": "style: 'margin-top: 6px;', checked: false",
+			
+		},	
+		{
+			"parameter": "DZPRESSION",
+			"description": "Capteur de pression : ",
+			"xtype": "checkbox",
+			"field": "style: 'margin-top: 6px;', checked: false",
+			
+		},	
+		{
+			"parameter": "DZOUV",
+			"description": "Détecteur d'ouverture : ",
+			"xtype": "checkbox",
+			"field": "style: 'margin-top: 6px;', checked: false",
+			
+		},	
+		{
+			"parameter": "DZMVT",
+			"description": "Détecteur de nouvement : ",
+			"xtype": "checkbox",
+			"field": "style: 'margin-top: 6px;', checked: false",
+			
+		},	
+		{
+			"parameter": "DZBAT",
+			"description": "Indicateur Batterie : ",
+			"xtype": "checkbox",
+			"field": "style: 'margin-top: 6px;', checked: false",
+			
+		},	
+			{
+			"parameter": "DZBAT",
+			"description": "Capteur accésible : ",
+			"xtype": "checkbox",
+			"field": "style: 'margin-top: 6px;', checked: false",
+			
+		},	
+		{
+			"parameter": "DZFREQ",
+			"description": "Fréquence de la requête",
+			"xtype": "numberfield",
+			"default_value": "30",
+			"field": "minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
+			
+			"R_config": "//config/battery, //config/reachable",
+			"R_state": "//state/buttonevent, //state/temperature div 100",
+			"R_state3": "//state/pressure, //state/humidity div 100",
+			"R_end": "fin"		
+			
+		}
+
+	],
+	"scripts": [{
+			"name": "2B_deconzlist.php"
+		},
+		{
+			"name": "2B_deconz.php"
+		}
+	],
+	"devices": [{
+			"device_id": "decztemp",
+			"create": "plugin.parameters.DZTEMP",
+			"module_id": "51",
+			"type": "http",
+			"name_fr": "Température (plugin.parameters.DZIDDECONZ)",
+			"icon": "thermometer.png",
+			"utilisation_id": "7",
+			"value_unit": "°C",
+			"parameters": {
+				"VAR1": "2B_deconz.php",
+				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR3": "",
+				"value_type": "float",
+				"ignore_errors": 3,
+				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_XPATH": "//state/temperature div 100",
+				"POLLING": "plugin.parameters.DZFREQ",
+				"CONVERT": "0"
+			}
+		},
+		{
+			"device_id": "deczhum",
+			"create": "plugin.parameters.DZHUM",
+			"module_id": "51",
+			"type": "http",
+			"name_fr": "Himidité (plugin.parameters.DZIDDECONZ)",
+			"icon": "humidite.png",
+			"utilisation_id": "22",
+			"value_unit": "%",
+			"parameters": {
+				"VAR1": "2B_deconz.php",
+				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR3": "",
+				"value_type": "float",
+				"ignore_errors": 3,
+				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_XPATH": "//state/humidity div 100",
+				"POLLING": "5",
+				"CONVERT": "0"
+			}
+		}
+	]
+}
