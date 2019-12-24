@@ -89,16 +89,16 @@
 			
 		},	
 		{
-			"R_config": "//config/battery, //config/reachable",
-			"R_state": "//state/buttonevent, //state/temperature div 100",
-			"R_state3": "//state/pressure, //state/humidity div 100",
-			"R_end": "fin",
-
+			
 			"parameter": "DZFREQ",
 			"description": "Fréquence de la requête",
 			"xtype": "numberfield",
 			"default_value": "10",
-			"field": "minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
+			"field": "minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false",
+			"R_config": "//config/battery, //config/reachable",
+			"R_state": "//state/buttonevent, //state/temperature div 100",
+			"R_state3": "//state/pressure, //state/humidity div 100",
+			"R_end": "fin"
 			
 			
 		}
@@ -149,6 +149,27 @@
 				"ignore_errors": 3,
 				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
 				"RAW_XPATH": "//state/humidity div 100",
+				"POLLING": "plugin.parameters.DZFREQ",
+				"CONVERT": "0"
+			}
+		},
+		{
+			"device_id": "deczhum",
+			"create": "plugin.parameters.DZPRESSION",
+			"module_id": "51",
+			"type": "http",
+			"name_fr": "Himidité (plugin.parameters.DZIDDECONZ)",
+			"icon": "pression.png",
+			"utilisation_id": "32",
+			"value_unit": "hPa",
+			"parameters": {
+				"VAR1": "2B_deconz.php",
+				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR3": "",
+				"value_type": "float",
+				"ignore_errors": 3,
+				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_XPATH": "//state/pressure",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			}
