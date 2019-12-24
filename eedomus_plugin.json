@@ -50,55 +50,56 @@
 			"parameter": "DZHUM",
 			"description": "Capteur d'humidité : ",
 			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false",
+			"field": "style: 'margin-top: 6px;', checked: false"
 			
 		},	
 		{
 			"parameter": "DZPRESSION",
 			"description": "Capteur de pression : ",
 			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false",
+			"field": "style: 'margin-top: 6px;', checked: false"
 			
 		},	
 		{
 			"parameter": "DZOUV",
 			"description": "Détecteur d'ouverture : ",
 			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false",
+			"field": "style: 'margin-top: 6px;', checked: false"
 			
 		},	
 		{
 			"parameter": "DZMVT",
 			"description": "Détecteur de nouvement : ",
 			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false",
+			"field": "style: 'margin-top: 6px;', checked: false"
 			
 		},	
 		{
 			"parameter": "DZBAT",
 			"description": "Indicateur Batterie : ",
 			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false",
+			"field": "style: 'margin-top: 6px;', checked: false"
 			
 		},	
 			{
 			"parameter": "DZBAT",
 			"description": "Capteur accésible : ",
 			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false",
+			"field": "style: 'margin-top: 6px;', checked: false"
 			
 		},	
 		{
-			"parameter": "DZFREQ",
-			"description": "Fréquence de la requête",
-			"xtype": "numberfield",
-			"default_value": "30",
-			"field": "minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
-			
 			"R_config": "//config/battery, //config/reachable",
 			"R_state": "//state/buttonevent, //state/temperature div 100",
 			"R_state3": "//state/pressure, //state/humidity div 100",
-			"R_end": "fin"		
+			"R_end": "fin",
+
+			"parameter": "DZFREQ",
+			"description": "Fréquence de la requête",
+			"xtype": "numberfield",
+			"default_value": "10",
+			"field": "minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
+			
 			
 		}
 
@@ -148,7 +149,7 @@
 				"ignore_errors": 3,
 				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
 				"RAW_XPATH": "//state/humidity div 100",
-				"POLLING": "5",
+				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			}
 		}
