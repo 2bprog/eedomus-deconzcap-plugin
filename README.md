@@ -1,0 +1,1 @@
+# eedomus-deconzcap-plugin
