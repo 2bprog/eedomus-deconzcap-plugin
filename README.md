@@ -2,7 +2,7 @@
 
 Plugin eedomus pour lire les capteurs deCONZ
 
-# Type d'informations disponible
+## Type d'informations disponible
 
 * Température
 * Humidité
@@ -15,7 +15,7 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Etat batterie
 
 
-# Périphériques testés 
+## Périphériques testés 
 
 * Ikea - Tradfri Détecteur de mouvement
 * Ikea - Tradfri Commande On/Off
@@ -27,5 +27,5 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Xiaomi Aqara - Magic Cube
 
 ***
-(1) - la mise en place d'un push via domoticz permet d'avoir les modifications en instantané
+(1) - la mise en place d'un push via domoticz ou un autre système permet d'avoir les modifications en instantané
 
