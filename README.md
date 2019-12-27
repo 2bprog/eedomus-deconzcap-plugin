@@ -21,10 +21,10 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Ikea - Tradfri Commande On/Off
 * Ikea - Tradfri Variateur
 * Ikea - Tradfri Télécommande
-* Xiaomi Aqara - Capteur de température, humidité, pression
-* Xiaomi Aqara - Détecteur d'ouverture de porte/fenêtre
-* Xiaomi Aqara - Détecteur de mouvement + luminosité
-* Xiaomi Aqara - Magic Cube
+* Xiaomi - Aqara Capteur de température, humidité, pression
+* Xiaomi - Aqara Détecteur d'ouverture de porte/fenêtre
+* Xiaomi - Aqara Détecteur de mouvement + luminosité
+* Xiaomi - Aqara Magic Cube
 
 ***
 (1) - la mise en place d'un push via domoticz ou un autre système permet d'avoir les modifications en instantané
