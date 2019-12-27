@@ -1,6 +1,6 @@
 # eedomus-deconzcap-plugin
 
-Plugin eedomus pour lire lles valeurs des capteurs de deCONZ.
+Plugin eedomus pour lire les valeurs des capteurs de deCONZ.
 
 ## Type d'information disponible
 
