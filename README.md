@@ -1,6 +1,6 @@
 # eedomus-deconzcap-plugin
 
-Plugin eedomus pour lire les capteurs deCONZ
+Plugin eedomus pour lire lles valeurs des capteurs de deCONZ.
 
 ## Type d'information disponible
 
@@ -8,12 +8,11 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Humidité
 * Pression
 * Luminosité
-* Détection de mouvement<sup>1</sup>
-* Détection d'ouverture<sup>1</sup>
-* Button de Télécommande<sup>1</sup>
+* Détection de mouvement
+* Détection d'ouverture
+* Button de Télécommande
 * Etat de communication du péripérique
 * Etat batterie
-
 
 ## Périphériques testés 
 
@@ -26,6 +25,5 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Xiaomi - Aqara Détecteur de mouvement + luminosité
 * Xiaomi - Aqara Magic Cube
 
-***
-<sup>1</sup> *La mise en place d'un push via domoticz ou un autre système permet d'obtenir les modifications en instantané*
-
+## Remarques 
+La mise en place d'un push vers l'eedomus via un autre système (ex Domoticz, Node-RED...) connecté au webservice de deCONZ permet d'obtenir les changements d'etat en temps réèl.
