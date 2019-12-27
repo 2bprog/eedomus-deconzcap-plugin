@@ -12,7 +12,7 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Détection d'ouverture (1)
 * Button de Télécommande (1)
 * Etat de communication du péripérique
-* Etat de la B=batterie
+* Etat batterie
 
 
 # Périphériques testés 
