@@ -2,7 +2,7 @@
 
 Plugin eedomus pour lire les capteurs deCONZ
 
-## Type d'informations disponible
+## Type d'information disponible
 
 * Température
 * Humidité
