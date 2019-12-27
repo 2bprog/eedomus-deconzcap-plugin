@@ -8,9 +8,9 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Humidité
 * Pression
 * Luminosité
-* Détection de mouvement (1)
-* Détection d'ouverture (1)
-* Button de Télécommande (1)
+* Détection de mouvement<sup>1</sup>
+* Détection d'ouverture<sup>1</sup>
+* Button de Télécommande<sup>1</sup>
 * Etat de communication du péripérique
 * Etat batterie
 
@@ -27,5 +27,5 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Xiaomi - Aqara Magic Cube
 
 ***
-(1) - la mise en place d'un push via domoticz ou un autre système permet d'avoir les modifications en instantané
+(1) La mise en place d'un push via domoticz ou un autre système permet d'obtenir les modifications en instantané
 
