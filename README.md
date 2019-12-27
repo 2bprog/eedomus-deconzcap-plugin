@@ -27,5 +27,5 @@ Plugin eedomus pour lire les capteurs deCONZ
 * Xiaomi - Aqara Magic Cube
 
 ***
-(1) La mise en place d'un push via domoticz ou un autre système permet d'obtenir les modifications en instantané
+<sup>1</sup> La mise en place d'un push via domoticz ou un autre système permet d'obtenir les modifications en instantané
 
