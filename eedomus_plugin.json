@@ -6,7 +6,7 @@
 	"creation_date": "2019-12-23",
 	"modification_date": "2019-12-27",
 	"author": "Benjamin B.<br><a target='_blank' href='https://github.com/2bprog/eedomus-deconzact-plugin'>Sources sur github <img src='/img/external.png'></a>",
-	"description_fr": "[DEV] - Création d'un périphérique deConz de type capteur",
+	"description_fr": "[DEV] - CrÃ©ation d'un pÃ©riphÃ©rique deConz de type capteur",
 	"description_en": "",
 	"description_es": "",
 	"description_it": "",
@@ -48,13 +48,13 @@
 		},
 		{
 			"parameter": "DZTEMP",
-			"description": "Température",
+			"description": "TempÃ©rature",
 			"xtype": "checkbox",
 			"field": "style: 'margin-top: 6px;', checked: true"
 		},
 		{
 			"parameter": "DZHUM",
-			"description": "Humidité",
+			"description": "HumiditÃ©",
 			"xtype": "checkbox",
 			"field": "style: 'margin-top: 6px;', checked: false"
 		},
@@ -66,25 +66,25 @@
 		},
 		{
 			"parameter": "DZLUX",
-			"description": "Luminosité",
+			"description": "LuminositÃ©",
 			"xtype": "checkbox",
 			"field": "style: 'margin-top: 6px;', checked: false"
 		},		
 		{
 			"parameter": "DZMVT",
-			"description": "Détecteur de mouvement (1)",
+			"description": "DÃ©tecteur de mouvement (1)",
 			"xtype": "checkbox",
 			"field": "style: 'margin-top: 6px;', checked: false"
 		},
 		{
 			"parameter": "DZOUV",
-			"description": "Détecteur d'ouverture (1)",
+			"description": "DÃ©tecteur d'ouverture (1)",
 			"xtype": "checkbox",
 			"field": "style: 'margin-top: 6px;', checked: false"
 		},
 		{
 			"parameter": "DZTEL",
-			"description": "Télécommande (1)",
+			"description": "TÃ©lÃ©commande (1)",
 			"xtype": "checkbox",
 			"field": "style: 'margin-top: 6px;', checked: false"
 		},
@@ -102,7 +102,7 @@
 		},			
 		{
 			"parameter": "DZFREQ",
-			"description": "Fréquence d'actualisation (min)",
+			"description": "FrÃ©quence d'actualisation (min)",
 			"xtype": "numberfield",
 			"default_value": "10",
 			"field": "minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
@@ -153,10 +153,10 @@
 			"create": "plugin.parameters.DZTEMP",
 			"module_id": "51",
 			"type": "http",
-			"name_fr": "Température plugin.name",
+			"name_fr": "TempÃ©rature plugin.name",
 			"icon": "thermometer.png",
 			"utilisation_id": "7",
-			"value_unit": "°C",
+			"value_unit": "Â°C",
 			"parameters": {
 				"VAR1": "2B_deconz.php",
 				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
@@ -175,7 +175,7 @@
 			"create": "plugin.parameters.DZHUM",
 			"module_id": "51",
 			"type": "http",
-			"name_fr": "Humidité plugin.name",
+			"name_fr": "HumiditÃ© plugin.name",
 			"icon": "humidite.png",
 			"utilisation_id": "22",
 			"value_unit": "%",
@@ -219,7 +219,7 @@
 			"create": "plugin.parameters.DZLUX",
 			"module_id": "51",
 			"type": "http",
-			"name_fr": "Luminosité plugin.name",
+			"name_fr": "LuminositÃ© plugin.name",
 			"icon": "luminosite.png",
 			"utilisation_id": "24",
 			"value_unit": "Lux",
@@ -241,7 +241,7 @@
 			"create": "plugin.parameters.DZMVT",
 			"module_id": "51",
 			"type": "http",
-			"name_fr": "Détecteur mvt. plugin.name",
+			"name_fr": "DÃ©tecteur mvt. plugin.name",
 			"icon": "pir.png",
 			"utilisation_id": "37",			
 			"parameters": {
@@ -273,7 +273,7 @@
 			"create": "plugin.parameters.DZOUV",
 			"module_id": "51",
 			"type": "http",
-			"name_fr": "Détecteur ouv plugin.name",
+			"name_fr": "DÃ©tecteur ouv plugin.name",
 			"icon": "windows_open.png",
 			"utilisation_id": "10",			
 			"parameters": {
@@ -289,7 +289,7 @@
 			},
 			"values": [{
 					"value": "0",
-					"description": "Fermé",
+					"description": "FermÃ©",
 					"icon": "windows_closed.png"
 				},
 				{
@@ -329,7 +329,7 @@
 			"create": "plugin.parameters.DZTEL",
 			"module_id": "51",
 			"type": "http",
-			"name_fr": "Télécommande (plugin.parameters.DZIDDECONZ)",
+			"name_fr": "TÃ©lÃ©commande (plugin.parameters.DZIDDECONZ)",
 			"icon": "remote.png",
 			"utilisation_id": "35",			
 			"parameters": {
