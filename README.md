@@ -1,29 +1,29 @@
-# eedomus-deconzcap-plugin
+# eedomus-deconzcap-plugin (DEVELOPPEMENT EN COURS)
 
 Plugin eedomus pour lire les valeurs des capteurs de deCONZ.
 
 ## Capteurs disponibles
 
-* Température
-* Humidité
+* TempÃ©rature
+* HumiditÃ©
 * Pression
-* Luminosité
-* Détection de mouvement
-* Détection d'ouverture
-* Button de Télécommande
-* Etat de communication du péripérique
+* LuminositÃ©
+* DÃ©tection de mouvement
+* DÃ©tection d'ouverture
+* Button de TÃ©lÃ©commande
+* Etat de communication du pÃ©ripÃ©rique
 * Etat batterie
 
-## Périphériques testés 
+## PÃ©riphÃ©riques testÃ©s 
 
-* Ikea - Tradfri Détecteur de mouvement
+* Ikea - Tradfri DÃ©tecteur de mouvement
 * Ikea - Tradfri Commande On/Off
 * Ikea - Tradfri Variateur
-* Ikea - Tradfri Télécommande
-* Xiaomi - Aqara Capteur de température, humidité, pression
-* Xiaomi - Aqara Détecteur d'ouverture de porte/fenêtre
-* Xiaomi - Aqara Détecteur de mouvement + luminosité
+* Ikea - Tradfri TÃ©lÃ©commande
+* Xiaomi - Aqara Capteur de tempÃ©rature, humiditÃ©, pression
+* Xiaomi - Aqara DÃ©tecteur d'ouverture de porte/fenÃªtre
+* Xiaomi - Aqara DÃ©tecteur de mouvement + luminositÃ©
 * Xiaomi - Aqara Magic Cube
 
 ## Remarques 
-La mise en place d'un push vers l'eedomus via un autre système (ex Domoticz, Node-RED...) connecté au webservice de deCONZ permet d'obtenir les changements d'etat en temps réèl.
+La mise en place d'un push vers l'eedomus via un autre systÃ¨me (ex Domoticz, Node-RED...) connectÃ© au webservice de deCONZ permet d'obtenir les changements d'etat en temps rÃ©Ã¨l.
