@@ -6,7 +6,7 @@
 	"creation_date": "2019-12-23",
 	"modification_date": "2020-01-06",
 	"author": "Benjamin B.<br><a target='_blank' href='https://github.com/2bprog/eedomus-deconzact-plugin'>Sources sur github <img src='/img/external.png'></a>",
-	"description_fr": "Création d'un périphérique deConz de type capteur",
+	"description_fr": "Création d'un périphérique deCONZ de type Capteur<br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee",
 	"description_en": "",
 	"description_es": "",
 	"description_it": "",
@@ -36,7 +36,7 @@
 			"parameter": "DZAPIKEYCR",
 			"description": "Clef API deCONZ ",			
             "xtype": "displayfield",
-            "field": "style: 'padding-top: 3px;', value: 'Pour l\\'obtenir : Connectez vous à <b>Phoscon-GW</b>, puis allez dans <b>Settings/Gateway/Advanced</b>,<br> cliquez sur <b>Athenticate app</b>, ensuite <a href=\\'javascript:eval(atob(\"d2luZG93Lm9wZW4oJy9zY3JpcHRfcHJveHkvP2V4ZWM9MkJfZGVjb256bGlzdC5waHAmaXA9Jytkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGVyaXBoX3BhcmFtW2BEWklQYF0nKS52YWx1ZSsnJmNtZD1hcGkmcDI9aHRtbCZjb250cm9sbGVyX2lkPScrRXh0LmdldENtcCgnYXR0YWNoZWRfY29udHJvbGxlcl9pZCcpLmdldFZhbHVlKCksJ2RlY29ueicsJ3dpZHRoPTYwMCxoZWlnaHQ9MjAwLHRvb2xiYXI9bm8nKTs\"));\\'>cliquez ici</a>'"			
+            "field": "style: 'padding-top: 3px;', value: 'Pour l\\'obtenir : Connectez vous à <b>Phoscon-GW</b>, puis allez dans <b>Settings/Gateway/Advanced</b>,<br> cliquez sur <b>Authenticate app</b>, ensuite <a href=\\'javascript:eval(atob(\"d2luZG93Lm9wZW4oJy9zY3JpcHRfcHJveHkvP2V4ZWM9MkJfZGVjb256bGlzdC5waHAmaXA9Jytkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGVyaXBoX3BhcmFtW2BEWklQYF0nKS52YWx1ZSsnJmNtZD1hcGkmcDI9aHRtbCZjb250cm9sbGVyX2lkPScrRXh0LmdldENtcCgnYXR0YWNoZWRfY29udHJvbGxlcl9pZCcpLmdldFZhbHVlKCksJ2RlY29ueicsJ3dpZHRoPTYwMCxoZWlnaHQ9MjAwLHRvb2xiYXI9bm8nKTs\"));\\'>cliquez ici</a>'"			
 		},
 		{
 			"parameter": "DZAPIKEY",
@@ -49,7 +49,7 @@
 			"parameter": "DZIDLIST",
 			"description": "Identifiant du capteur ",			
             "xtype": "displayfield",
-            "field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:eval(atob(\"d2luZG93Lm9wZW4oJy9zY3JpcHRfcHJveHkvP2V4ZWM9MkJfZGVjb256bGlzdC5waHAmaXA9Jytkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGVyaXBoX3BhcmFtW2BEWklQYF0nKS52YWx1ZSsnJmtleT0nK2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwZXJpcGhfcGFyYW1bYERaQVBJS0VZYF0nKS52YWx1ZSsnJmNtZD1saXN0JnAxPWxpZ2h0cyZwMj1odG1sJmNvbnRyb2xsZXJfaWQ9JytFeHQuZ2V0Q21wKCdhdHRhY2hlZF9jb250cm9sbGVyX2lkJykuZ2V0VmFsdWUoKSwnZGVjb256Jywnd2lkdGg9ODAwLGhlaWdodD02MDAsdG9vbGJhcj1ubycpOw\"));\\'>Liste des capteurs</a>'"			
+            "field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:eval(atob(\"d2luZG93Lm9wZW4oJy9zY3JpcHRfcHJveHkvP2V4ZWM9MkJfZGVjb256bGlzdC5waHAmaXA9Jytkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGVyaXBoX3BhcmFtW2BEWklQYF0nKS52YWx1ZSsnJmtleT0nK2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwZXJpcGhfcGFyYW1bYERaQVBJS0VZYF0nKS52YWx1ZSsnJmNtZD1saXN0JnAxPXNlbnNvcnMmcDI9aHRtbCZjb250cm9sbGVyX2lkPScrRXh0LmdldENtcCgnYXR0YWNoZWRfY29udHJvbGxlcl9pZCcpLmdldFZhbHVlKCksJ2RlY29ueicsJ3dpZHRoPTgwMCxoZWlnaHQ9NjAwLHRvb2xiYXI9bm8nKTs\"));\\'>Liste des capteurs</a>'"			
 		},
 		{
 			"parameter": "DZIDDECONZ",
@@ -57,7 +57,24 @@
 			"xtype": "numberfield",
 			"default_value": "",
 			"field": "style: 'padding: 3px;', minValue:1, allowDecimals:false, width:60, allowBlank:false"
-		},	
+		},			
+		{
+			"parameter": "DZMODEL",
+			"description": "Modèle de capteur",
+			"xtype": "combo",
+			"default_value": "",
+			"field": "style: 'padding: 3px;', width:200, allowBlank:false, store:[
+			[1, 'Température'],
+			[2, 'Humidité'],
+			[3, 'Pression'] ,
+			[3, 'Luminosité'],
+			[3, 'Détecteur Mouvement'],
+			[3, 'Détecteur Ouverture'],
+			[3, 'Etat Batterie'],
+			[3, 'Etat Communication'],
+			[4, '']
+			], triggerAction: 'all'"
+		},
 		{
 			"parameter": "DZACC",
 			"description": "<b>Type de capteur :</b>",
