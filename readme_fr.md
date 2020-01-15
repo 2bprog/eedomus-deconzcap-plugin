@@ -16,9 +16,11 @@ Ce plugin eedomus permet de lire les valeurs des capteurs configurés dans deCONZ
 ## Installation
 Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store eedomus" / "Capteurs - deConz" / "Créer"
 
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config1.png)
+
 ## Champs à configurer : 
 
-![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config.png)
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config2.png)
 
 ### IP + Port
 * Adresse IP et port du serveur. Vous pouvez également cliquer sur "Recherche de serveur deCONZ" pour afficher une fenêtre avec la liste des serveurs deCONZ présent sur votre réseau.
@@ -42,44 +44,21 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 
 ### Identifiants
 
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config3.png)
+
 * Dans les différentes zones de saisie, vous pouvez saisir des identifiants différents en fonction du type de capteur (0 => pas de création du capteur). Ils seront au final associés au capteur de communication. Vous pouvez également obtenir la liste des capteurs en cliquant sur "Liste des capteurs". Le champ "type" affiche les capteurs disponibles associé au périphérique. (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
 
 ![Liste des capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/liste-capteurs.png)
 
-
 * **Communication** : Information de l'état de la communication du capteur. [Identifiant Obligatoire]
-
-### Batterie
-
-* Pourcentage de la batterie
-
-### Température
-
-* Capteur de température.
-
-### Humidité
-
-* Capteur du taux d'humidité
-
-### Pression
-
-* Capteur de pression atmosphérique.
-
-### Luminosité
-
-* Capteur de luminosité
-
-### Détecteur de mouvement
-
-* Capteur de mouvement (0 - aucun mouvement, 100 - mouvement)
-
-### Détecteur d'ouverture
-
-* Capteur d'ouverture (0 - fermé, 100 - ouvert)
-
-### Fréquence d'actualisation
-
-* Permet de fixer le temps de rafraichement des valeurs du périphérique (en minutes).
+* **Batterie** : Pourcentage de la batterie.
+* **Température** :  Capteur de température.
+* **Humidité** :  Capteur du taux d'humidité.
+* **Pression** :  Capteur de pression atmosphérique.
+* **Luminosité** :  Capteur de luminosité.
+* **Détecteur de mouvement** :  Capteur de mouvement (0 - aucun mouvement, 100 - mouvement).
+* **Détecteur d'ouverture** :  Capteur d'ouverture (0 - fermé, 100 - ouvert).
+* **Fréquence d'actualisation** :  Permet de fixer le temps de rafraichement des valeurs du périphérique (en minutes).
 
 ## Périphériques crées en fonction de votre sélection : 
 
