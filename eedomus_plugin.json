@@ -6,7 +6,7 @@
 	"creation_date": "2019-12-23",
 	"modification_date": "2020-01-15",
 	"author": "Benjamin B.<br><a target='_blank' href='https://github.com/2bprog/eedomus-deconzact-plugin'>Sources sur github <img src='/img/external.png'></a>",
-	"description_fr": "Création d'un périphérique deCONZ de type Capteur : <br>Température, Humidité, Pression, Luminosité,<br>Détection de mouvementn Détection d'ouverture,<br>Etat de la batterie, Etat de la communication,<br><br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee",
+	"description_fr": "<b>Création d'un périphérique deCONZ de type Capteur : </b><br><br>Température, Humidité, Pression, Luminosité,<br>Détection de mouvement, Détection d'ouverture,<br>Etat de la batterie, Etat de la communication,<br><br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee",
 	"description_en": "",
 	"description_es": "",
 	"description_it": "",
@@ -17,17 +17,11 @@
 			"parameter": "DZCONFIG",
 			"description": "<b>Configuration :</b>",
             "xtype": "displayfield",
-			"field": "style: 'padding: 3px; visibility:hidden;', value: ''"
+			"field": "style: 'padding: 3px; ', value: '<a href=\\'javascript:eval(atob(\"d2luZG93Lm9wZW4oJy9zY3JpcHRfcHJveHkvP2V4ZWM9MkJfZGVjb256bGlzdC5waHAmY21kPWRpc2NvdmVyJnAyPWh0bWwmY29udHJvbGxlcl9pZD0nICsgRXh0LmdldENtcCgnYXR0YWNoZWRfY29udHJvbGxlcl9pZCcpLmdldFZhbHVlKCksJ2RlY29ueicsJ3dpZHRoPTYwMCxoZWlnaHQ9NDAwLHRvb2xiYXI9bm8nKTs\"));\\'>Recherche de serveur deCONZ</a>'"			
 		},		
 		{		
-			"parameter": "DZIPLIST",
-			"description": "IP + Port du serveur deCONZ",			
-            "xtype": "displayfield",
-            "field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:eval(atob(\"d2luZG93Lm9wZW4oJy9zY3JpcHRfcHJveHkvP2V4ZWM9MkJfZGVjb256bGlzdC5waHAmY21kPWRpc2NvdmVyJnAyPWh0bWwmY29udHJvbGxlcl9pZD0nICsgRXh0LmdldENtcCgnYXR0YWNoZWRfY29udHJvbGxlcl9pZCcpLmdldFZhbHVlKCksJ2RlY29ueicsJ3dpZHRoPTYwMCxoZWlnaHQ9NDAwLHRvb2xiYXI9bm8nKTs\"));\\'>Recherche de serveur</a>'"			
-		},
-		{		
 			"parameter": "DZIP",
-			"description": " ",
+			"description": "IP + Port du serveur ",
 			"xtype": "textfield",
 			"default_value2": "","default_value": "10.66.254.101:8090",
 			"field": "style: 'padding: 3px;', width:130, allowBlank:false, maskRe:/[0-9.:]/, regex:/^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])\\:([0-9]{2}[0-9]?[0-9]?)$/, regexText:'Adresse IP invalide [0-255].[0-255].[0-255]:[0-255]'"
@@ -43,82 +37,89 @@
 			"description": " ",
 			"xtype": "textfield",
 			"default_value2": "","default_value": "FB5A4E6BBF",
-			"field": "style: 'padding: 3px;', width:130, allowBlank: false , maxLength:40, minLength:10"
+			"field": "style: 'padding: 3px; margin-bottom: 10px;', width:130, allowBlank: false , maxLength:40, minLength:10"
 		},
+	
 		{		
 			"parameter": "DZIDLIST",
-			"description": "Identifiant du capteur ",			
+			"description": "<b>Identifiants :</b>",			
             "xtype": "displayfield",
             "field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:eval(atob(\"d2luZG93Lm9wZW4oJy9zY3JpcHRfcHJveHkvP2V4ZWM9MkJfZGVjb256bGlzdC5waHAmaXA9Jytkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGVyaXBoX3BhcmFtW2BEWklQYF0nKS52YWx1ZSsnJmtleT0nK2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwZXJpcGhfcGFyYW1bYERaQVBJS0VZYF0nKS52YWx1ZSsnJmNtZD1saXN0JnAxPXNlbnNvcnMmcDI9aHRtbCZjb250cm9sbGVyX2lkPScrRXh0LmdldENtcCgnYXR0YWNoZWRfY29udHJvbGxlcl9pZCcpLmdldFZhbHVlKCksJ2RlY29ueicsJ3dpZHRoPTgwMCxoZWlnaHQ9NjAwLHRvb2xiYXI9bm8nKTs\"));\\'>Liste des capteurs</a>'"			
 		},
 		{
 			"parameter": "DZCOMID",
-			"description": "ID - Communication",
+			"description": "Communication",
 			"xtype": "numberfield",
 			"default_value": "",
 			"field": "minValue:1, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"
 		},
 		{
+			"parameter": "DZBATID",
+			"description": "Batterie",		
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
+		},		
+		{
 			"parameter": "DZTEMPID",
-			"description": "ID - Température ",
+			"description": "Température ",
 			"xtype": "numberfield",
 			"default_value": "0",
 			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"
 		},
 		{
 			"parameter": "DZHUMID",
-			"description": "ID - Humidité",
+			"description": "Humidité",
 			"xtype": "numberfield",
 			"default_value": "0",
 			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},
 		{
 			"parameter": "DZPRESSIONID",
-			"description": "ID - Pression",
+			"description": "Pression",
 			"xtype": "numberfield",
-			"default_value": "0",
+			"default_value": "0",  
 			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},
 		{
 			"parameter": "DZLUXID",
-			"description": "ID - Luminosité",
+			"description": "Luminosité",
 			"xtype": "numberfield",
 			"default_value": "0",
 			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},		
 		{
 			"parameter": "DZMVTID",
-			"description": "ID - Détecteur de mouvement (1)",
+			"description": "Détecteur de mouvement (1)",
 			"xtype": "numberfield",
 			"default_value": "0",
 			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},
 		{
 			"parameter": "DZOUVID",
-			"description": "ID - Détecteur d'ouverture (1)",
+			"description": "Détecteur d'ouverture (1)",
 			"xtype": "numberfield",
 			"default_value": "0",
-			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
-		},
+			"field": "style: 'margin-bottom: 10px;', minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
+		},		
 		{
-			"parameter": "DZBATID",
-			"description": "ID - Batterie",		
-			"xtype": "numberfield",
-			"default_value": "0",
-			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
+			"parameter": "DZOPTIONS",
+			"description": "<b>Options :</b>",			
+            "xtype": "displayfield",
+            "field": "style: 'padding-top: 3px;', value: ' '"			
 		},
 		{
 			"parameter": "DZFREQ",
 			"description": "Fréquence d'actualisation (min)",
 			"xtype": "numberfield",
 			"default_value": "10",
-			"field": "minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
+			"field": "style: 'margin-bottom: 10px;', minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
 		},
 		{		
 			"parameter": "DZREM1",
-			"description": "",			
+			"description": "<b>Remarque :</b>",			
             "xtype": "displayfield",
-            "field": "style: 'padding-top: 15px;', value: 'Remarque : 1 - mise en place push'"			
+            "field": "value: '(1) La mise en place d\\'un push vers l\\'eedomus via un autre système (ex Domoticz, Node-RED...)<br> connecté au webservice de deCONZ permet d\\'obtenir les changements d\\'etat en temps réèl.'"			
 		}
 
 	],
