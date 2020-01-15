@@ -1,4 +1,4 @@
-Ce plugin eedomus permet de lire les valeurs des capteurs configurés dans deCONZ. Il prends en charge les élements suivants : 
+Ce plugin eedomus permet de lire les valeurs des capteurs configurés dans deCONZ (Application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee). Il prends en charge les élements suivants : 
 
 * Température
 * Humidité
@@ -42,13 +42,12 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 
 ### Identifiants
 
-* Dans les différentes zones de saisie, vous pouvez saisir des identifiants différents en fonction du type de capteur. Ils seront au final associés au capteur de communication. Vous pouvez également obtenir la liste des capteurs en cliquant sur "Liste des capteurs". Le champ "type" affiche les czpteurs disponibles associé au périphérique. (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
+* Dans les différentes zones de saisie, vous pouvez saisir des identifiants différents en fonction du type de capteur (0 => pas de création du capteur). Ils seront au final associés au capteur de communication. Vous pouvez également obtenir la liste des capteurs en cliquant sur "Liste des capteurs". Le champ "type" affiche les capteurs disponibles associé au périphérique. (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
 
 ![Liste des capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/liste-capteurs.png)
 
-### Communication
 
-* Information de l'état de la communication du capteur. [Identifiant Obligatoire]
+* **Communication** : Information de l'état de la communication du capteur. [Identifiant Obligatoire]
 
 ### Batterie
 
@@ -76,7 +75,7 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 
 ### Détecteur d'ouverture
 
-* Capteur d'ouveture (0 - fermé, 100 - ouvert)
+* Capteur d'ouverture (0 - fermé, 100 - ouvert)
 
 ### Fréquence d'actualisation
 
