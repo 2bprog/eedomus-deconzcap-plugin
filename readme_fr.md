@@ -42,7 +42,8 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 
 ### Identifiants
 
-* Dans les différentes zones de saisie, vous pouvez saisir des identifiants différents en fonction du type de capteur, ils seront au final associés au capteur de communication. Vous pouvez obtenir la liste des capteurs en cliquant sur "Liste des capteurs". Dans le champ "type" sera affiché les informations disponibles (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
+* Dans les différentes zones de saisie, vous pouvez saisir des identifiants différents en fonction du type de capteur. Ils seront au final associés au capteur de communication. Vous pouvez également obtenir la liste des capteurs en cliquant sur "Liste des capteurs". Le champ "type" affiche les czpteurs disponibles associé au périphérique. (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
+
 ![Liste des capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/liste-capteurs.png)
 
 ### Communication
