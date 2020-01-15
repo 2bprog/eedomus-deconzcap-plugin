@@ -1,9 +1,17 @@
-Ce plugin eedomus permet de lire les valeurs (Température, Humidité, Pression, Luminosité, Détection de mouvement, Détection d'ouverture, Etat de communication du péripérique, Etat batterie) des capteurs configurés dans deCONZ.
+Ce plugin eedomus permet de lire les valeurs des capteurs configurés dans deCONZ. Il prends en charge les élements suivants : 
+
+* Température
+* Humidité
+* Pression
+* Luminosité
+* Détection de mouvement
+* Détection d'ouverture
+* Etat de communication du périphérique
+* Etat batterie
 
 ## Prérequis
 
 * Un serveur deCONZ installé 
-
 
 ## Installation
 Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store eedomus" / "Capteurs - deConz" / "Créer"
@@ -34,7 +42,7 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 
 ### Identifiants
 
-* Dans La liste ci-dessous, vous pouvez choisir le ou les types de capteur que vous allez créer.pCet identifiant correspond au périphérique que vous voulez gérer, vous pouvez en obtenir la liste en cliquant sur le lien "Liste des actionneurs" (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
+* Dans les différentes zones de saisie, vous pouvez saisir des identifiants différents en fonction du type de capteur, ils seront au final associés au capteur de communication. Vous pouvez obtenir la liste des capteurs en cliquant sur "Liste des capteurs". Dans le champ "type" sera affiché les informations disponibles (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
 ![Liste des capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/liste-capteurs.png)
 
 ### Communication
@@ -59,15 +67,15 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 
 ### Luminosité
 
-* capteur de luminosité
+* Capteur de luminosité
 
 ### Détecteur de mouvement
 
-* capteur de mouvement (0 - aucun mouvement, 100 - mouvement)
+* Capteur de mouvement (0 - aucun mouvement, 100 - mouvement)
 
 ### Détecteur d'ouverture
 
-* capteur d'ouveture (0 - fermé, 100 - ouvert)
+* Capteur d'ouveture (0 - fermé, 100 - ouvert)
 
 ### Fréquence d'actualisation
 
