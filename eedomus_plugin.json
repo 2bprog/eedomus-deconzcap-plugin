@@ -2,11 +2,11 @@
 	"plugin_id": "bbdeconzcap",
 	"name_fr": "Capteurs - deConz",
 	"icon": "deconzcap.png",
-	"version": "0.6.0",
+	"version": "0.0.1",
 	"creation_date": "2019-12-23",
-	"modification_date": "2020-01-06",
+	"modification_date": "2020-01-15",
 	"author": "Benjamin B.<br><a target='_blank' href='https://github.com/2bprog/eedomus-deconzact-plugin'>Sources sur github <img src='/img/external.png'></a>",
-	"description_fr": "Création d'un périphérique deCONZ de type Capteur<br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee",
+	"description_fr": "Création d'un périphérique deCONZ de type Capteur : <br>Température, Humidité, Pression, Luminosité,<br>Détection de mouvementn Détection d'ouverture,<br>Etat de la batterie, Etat de la communication,<br><br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee",
 	"description_en": "",
 	"description_es": "",
 	"description_it": "",
@@ -29,7 +29,7 @@
 			"parameter": "DZIP",
 			"description": " ",
 			"xtype": "textfield",
-			"default_value": "",
+			"default_value2": "","default_value": "10.66.254.101:8090",
 			"field": "style: 'padding: 3px;', width:130, allowBlank:false, maskRe:/[0-9.:]/, regex:/^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])\\:([0-9]{2}[0-9]?[0-9]?)$/, regexText:'Adresse IP invalide [0-255].[0-255].[0-255]:[0-255]'"
 		},
 		{		
@@ -42,7 +42,7 @@
 			"parameter": "DZAPIKEY",
 			"description": " ",
 			"xtype": "textfield",
-			"default_value": "",
+			"default_value2": "","default_value": "FB5A4E6BBF",
 			"field": "style: 'padding: 3px;', width:130, allowBlank: false , maxLength:40, minLength:10"
 		},
 		{		
@@ -52,96 +52,75 @@
             "field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:eval(atob(\"d2luZG93Lm9wZW4oJy9zY3JpcHRfcHJveHkvP2V4ZWM9MkJfZGVjb256bGlzdC5waHAmaXA9Jytkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGVyaXBoX3BhcmFtW2BEWklQYF0nKS52YWx1ZSsnJmtleT0nK2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwZXJpcGhfcGFyYW1bYERaQVBJS0VZYF0nKS52YWx1ZSsnJmNtZD1saXN0JnAxPXNlbnNvcnMmcDI9aHRtbCZjb250cm9sbGVyX2lkPScrRXh0LmdldENtcCgnYXR0YWNoZWRfY29udHJvbGxlcl9pZCcpLmdldFZhbHVlKCksJ2RlY29ueicsJ3dpZHRoPTgwMCxoZWlnaHQ9NjAwLHRvb2xiYXI9bm8nKTs\"));\\'>Liste des capteurs</a>'"			
 		},
 		{
-			"parameter": "DZIDDECONZ",
-			"description": " ",
+			"parameter": "DZCOMID",
+			"description": "ID - Communication",
 			"xtype": "numberfield",
 			"default_value": "",
-			"field": "style: 'padding: 3px;', minValue:1, allowDecimals:false, width:60, allowBlank:false"
-		},			
-		{
-			"parameter": "DZMODEL",
-			"description": "Modèle de capteur",
-			"xtype": "combo",
-			"default_value": "",
-			"field": "style: 'padding: 3px;', width:200, allowBlank:false, store:[
-			[1, 'Température'],
-			[2, 'Humidité'],
-			[3, 'Pression'] ,
-			[3, 'Luminosité'],
-			[3, 'Détecteur Mouvement'],
-			[3, 'Détecteur Ouverture'],
-			[3, 'Etat Batterie'],
-			[3, 'Etat Communication'],
-			[4, '']
-			], triggerAction: 'all'"
+			"field": "minValue:1, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"
 		},
 		{
-			"parameter": "DZACC",
-			"description": "<b>Type de capteur :</b>",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px; visibility:hidden;', checked: true"
+			"parameter": "DZTEMPID",
+			"description": "ID - Température ",
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"
 		},
 		{
-			"parameter": "DZTEMP",
-			"description": "Température",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: true"
+			"parameter": "DZHUMID",
+			"description": "ID - Humidité",
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},
 		{
-			"parameter": "DZHUM",
-			"description": "Humidité",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false"
+			"parameter": "DZPRESSIONID",
+			"description": "ID - Pression",
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},
 		{
-			"parameter": "DZPRESSION",
-			"description": "Pression",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false"
-		},
-		{
-			"parameter": "DZLUX",
-			"description": "Luminosité",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false"
+			"parameter": "DZLUXID",
+			"description": "ID - Luminosité",
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},		
 		{
-			"parameter": "DZMVT",
-			"description": "Détecteur de mouvement (1)",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false"
+			"parameter": "DZMVTID",
+			"description": "ID - Détecteur de mouvement (1)",
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},
 		{
-			"parameter": "DZOUV",
-			"description": "Détecteur d'ouverture (1)",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false"
+			"parameter": "DZOUVID",
+			"description": "ID - Détecteur d'ouverture (1)",
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},
 		{
-			"parameter": "DZTEL",
-			"description": "Télécommande (1)",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: false"
+			"parameter": "DZBATID",
+			"description": "ID - Batterie",		
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},
-        {
-			"parameter": "DZOPTIONS",
-			"description": "<b>Options :</b>",
-            "xtype": "displayfield",
-			"field": "style: 'padding: 3px;', value: ' '"
-		},			
-		{
-			"parameter": "DZBAT",
-			"description": "Indicateur Batterie",
-			"xtype": "checkbox",
-			"field": "style: 'margin-top: 6px;', checked: true"
-		},			
 		{
 			"parameter": "DZFREQ",
 			"description": "Fréquence d'actualisation (min)",
 			"xtype": "numberfield",
 			"default_value": "10",
 			"field": "minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
+		},
+		{		
+			"parameter": "DZREM1",
+			"description": "",			
+            "xtype": "displayfield",
+            "field": "style: 'padding-top: 15px;', value: 'Remarque : 1 - mise en place push'"			
 		}
+
 	],
 	"scripts": [{
 			"name": "2B_deconzlist.php"
@@ -151,238 +130,162 @@
 		}
 	],
 	"devices": [
-		 {
-			"device_id": "deczacc",
-			"create": "plugin.parameters.DZACC",
+		{	"device_id": "deczacc", 		"parent_id": "", 			"create": "1",					
 			"module_id": "51",
 			"type": "http",
-			"name_fr": "Com. plugin.name (plugin.parameters.DZIDDECONZ)",
-			"icon": "heartbeat.png",
+			"name_fr": "Com. plugin.name (plugin.parameters.DZCOMID)",
+			"icon": "heartbeat.png","icon2b": "def_com.png",
 			"utilisation_id": "35",
 			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
 				"VAR3": "",
 				"value_type": "list",
 				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZCOMID&action=GET",
 				"RAW_XPATH": "//reachable",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			},
-			"values": [{
-					"value": "0",
-					"description": "Injoignable",
-					"icon": "heartbeat_c2.png"
-				},
-				{
-					"value": "1",
-					"description": "OK",
-					"icon": "heartbeat_c1.png"
-				}
+			"values": [
+				{ "value": "0", "description": "Injoignable",  "icon": "heartbeat_c2.png","icon2b": "def_com_ko.png" },
+				{ "value": "1",	"description": "OK",		   "icon": "heartbeat_c1.png","icon2b": "def_com_ok.png" }
 			]
 		},
-		{
-			"device_id": "decztemp",
-			"parent_id": "deczacc",
-			"create": "plugin.parameters.DZTEMP",
+		{	"device_id": "decztemp",		"parent_id": "deczacc",		"create": "plugin.parameters.DZTEMPID!=0",
 			"module_id": "51",
 			"type": "http",
 			"name_fr": "Température plugin.name",
-			"icon": "thermometer.png",
+			"icon": "thermometer.png","icon2b": "def_temp.png",
 			"utilisation_id": "7",
 			"value_unit": "°C",
 			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
 				"VAR3": "",
 				"value_type": "float",
 				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZTEMPID&action=GET",
 				"RAW_XPATH": "//temperature div 100",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			}
 		},
-		{
-			"device_id": "deczhum",
-			"parent_id": "deczacc",
-			"create": "plugin.parameters.DZHUM",
+		{	"device_id": "deczhum",			"parent_id": "deczacc",		"create": "plugin.parameters.DZHUMID!=0",
 			"module_id": "51",
 			"type": "http",
 			"name_fr": "Humidité plugin.name",
-			"icon": "humidite.png",
+			"icon": "humidite.png","icon2b": "def_hum.png",
 			"utilisation_id": "22",
 			"value_unit": "%",
 			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
 				"VAR3": "",
 				"value_type": "float",
 				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZHUMID&action=GET",
 				"RAW_XPATH": "//humidity div 100",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			}
 		},
-		{
-			"device_id": "deczpression",
-			"parent_id": "deczacc",
-			"create": "plugin.parameters.DZPRESSION",
+		{   "device_id": "deczpression",	"parent_id": "deczacc",		"create": "plugin.parameters.DZPRESSIONID!=0",
 			"module_id": "51",
 			"type": "http",
 			"name_fr": "Pression plugin.name",
-			"icon": "pression.png",
+			"icon": "pression.png","icon2b": "def_pression.png",
 			"utilisation_id": "32",
 			"value_unit": "hPa",
 			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
 				"VAR3": "",
 				"value_type": "float",
 				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZPRESSIONID&action=GET",
 				"RAW_XPATH": "//pressure",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			}
 		},
-		{
-			"device_id": "deczlux",
-			"parent_id": "deczacc",
-			"create": "plugin.parameters.DZLUX",
+		{	"device_id": "deczlux",			"parent_id": "deczacc",		"create": "plugin.parameters.DZLUXID!=0",
 			"module_id": "51",
 			"type": "http",
 			"name_fr": "Luminosité plugin.name",
-			"icon": "luminosite.png",
+			"icon": "luminosite.png","icon2b": "def_lux.png",
 			"utilisation_id": "24",
 			"value_unit": "Lux",
 			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
 				"VAR3": "",
 				"value_type": "float",
 				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZLUXID&action=GET",
 				"RAW_XPATH": "//lux",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			}
 		},
-		{
-			"device_id": "deczmvt",
-			"parent_id": "deczacc",
-			"create": "plugin.parameters.DZMVT",
+		{	"device_id": "deczmvt",			"parent_id": "deczacc", 	"create": "plugin.parameters.DZMVTID!=0",
 			"module_id": "51",
 			"type": "http",
 			"name_fr": "Détecteur mvt. plugin.name",
-			"icon": "pir.png",
+			"icon": "pir.png","icon2b": "def_dect_mvt.png",
 			"utilisation_id": "37",			
 			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
 				"VAR3": "",
 				"value_type": "list",
 				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
-				"RAW_XPATH": "//presence",
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZMVTID&action=GET",
+				"RAW_XPATH": "//presence * 100",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			},
-			"values": [{
-					"value": "0",
-					"description": "Aucun mouvement",
-					"icon": "presenceoff64.png"
-				},
-				{
-					"value": "1",
-					"description": "Mouvement",
-					"icon": "detection.png"
-				}
-			]
+			"values": [{ "value": "0", 		"description": "Aucun mouvement", 	"icon": "presenceoff64.png","icon2b":"Detect01_RAS.png" },
+					   { "value": "100",	"description": "Mouvement",   	 	"icon": "detection.png","icon2b":"Detect01_Mvt.png"	} ]
 		},
-		{
-			"device_id": "deczouv",
-			"parent_id": "deczacc",
-			"create": "plugin.parameters.DZOUV",
+		{	"device_id": "deczouv", 		"parent_id": "deczacc",		"create": "plugin.parameters.DZOUVID!=0",
 			"module_id": "51",
 			"type": "http",
 			"name_fr": "Détecteur ouv plugin.name",
-			"icon": "windows_open.png",
+			"icon": "windows_open.png","icon2b": "def_dect_ouv.png",
 			"utilisation_id": "10",			
 			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
 				"VAR3": "",
 				"value_type": "list",
 				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
-				"RAW_XPATH": "//open",
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZOUVID&action=GET",
+				"RAW_XPATH": "//open * 100 ",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			},
-			"values": [{
-					"value": "0",
-					"description": "Fermé",
-					"icon": "windows_closed.png"
-				},
-				{
-					"value": "1",
-					"description": "Ouvert",
-					"icon": "windows_open.png"
-				}
-			]
-		},
-
-		{
-			"device_id": "deczbat",
-			"parent_id": "deczacc",
-			"create": "plugin.parameters.DZBAT",
+			"values": [	{ "value": "0", 	"description": "Fermé", 	"icon": "windows_closed.png","icon2b":"fenetre01_ferme.png" },
+						{ "value": "100",	"description": "Ouvert",	"icon": "windows_open.png","icon2b":"fenetre01_ouvert.png"	} ]
+		},		
+		{	"device_id": "deczbat",			"parent_id": "deczacc",		"create": "plugin.parameters.DZBATID!=0",
 			"module_id": "51",
 			"type": "http",
 			"name_fr": "Batterie plugin.name",
-			"icon": "battery.png",
+			"icon": "battery.png","icon2b": "def_bat.png",
 			"utilisation_id": "35",
 			"value_unit": "%",
 			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
 				"VAR3": "",
 				"value_type": "float",
 				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZBATID&action=GET",
 				"RAW_XPATH": "//battery",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
-			}
-		},
-
-		{
-			"device_id": "decztel",
-			"parent_id": "deczacc",
-			"create": "plugin.parameters.DZTEL",
-			"module_id": "51",
-			"type": "http",
-			"name_fr": "Télécommande (plugin.parameters.DZIDDECONZ)",
-			"icon": "remote.png",
-			"utilisation_id": "35",			
-			"parameters": {
-				"VAR1": "2B_deconz.php",
-				"VAR2": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors,plugin.parameters.DZIDDECONZ",
-				"VAR3": "",
-				"value_type": "list",
-				"ignore_errors": 3,
-				"RAW_URL": "http://localhost/script/?exec=[VAR1]&vars=[VAR2]&action=GET",
-				"RAW_XPATH": "//buttonevent",
-				"POLLING": "plugin.parameters.DZFREQ",
-				"CONVERT": "0"
-			},
-			"values": [{
-				"value": "0",
-				"description": "N/A"				
-			}]
+			}		
 		}
-
 	]
 }
