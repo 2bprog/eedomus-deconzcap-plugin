@@ -1,24 +1,87 @@
-# eedomus-deconzcap-plugin
+Ce plugin eedomus permet de lire les valeurs des capteurs configurés dans deCONZ (Application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee). Il prends en charge les élements suivants : 
 
-Plugin eedomus pour lire les valeurs des capteurs de deCONZ.
-
-## Capteurs disponibles
-
-* TempÃ©rature
-* HumiditÃ©
+* Température
+* Humidité
 * Pression
-* LuminositÃ©
-* DÃ©tection de mouvement
-* DÃ©tection d'ouverture
-* Etat de communication du pÃ©ripÃ©rique
+* Luminosité
+* Détection de mouvement
+* Détection d'ouverture
+* Etat de communication du périphérique
 * Etat batterie
 
-## PÃ©riphÃ©riques testÃ©s 
+## Prérequis
 
-* Ikea - Tradfri DÃ©tecteur de mouvement
-* Xiaomi - Aqara Capteur de tempÃ©rature, humiditÃ©, pression
-* Xiaomi - Aqara DÃ©tecteur d'ouverture de porte/fenÃªtre
-* Xiaomi - Aqara DÃ©tecteur de mouvement + luminositÃ©
+* Un serveur deCONZ installé 
+
+## Installation
+Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store eedomus" / "Capteurs - deConz" / "Créer"
+
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config1.png)
+
+## Champs à configurer : 
+
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config2.png)
+
+### IP + Port
+* Adresse IP et port du serveur. Vous pouvez également cliquer sur "Recherche de serveur deCONZ" pour afficher une fenêtre avec la liste des serveurs deCONZ présent sur votre réseau.
+
+![Recherche de serveur](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/serveur.png)
+
+### Clef API
+* Pour communiquer avec deCONZ, le système a besoin d'un clef d'accès, si vous ne la connaissez pas, vous pouvez en créer une nouvelle avec le procédure suivante : Connectez-vous a **Phoscon-GW** puis allez dans **Settings/Gateway/Advanced**  puis, cliquez sur **Authenticate app**  (le paramètre IP + Port doit préalablement être renseigné)
+
+![Activation authentification deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/key-authenticate.png)
+
+* Ensuite vous pouvez cliquer sur "Cliquez ici" : Si tout se passe bien une fenêtre affichera votre nouvelle Clef API, sinon un message d'erreur sera affiché.
+
+**Clef OK :** 
+
+![Clef OK](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/key-ok.png)
+
+**Erreur :**
+
+![Clef Erreur](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/key-erreur.png)
+
+### Identifiants
+
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config3.png)
+
+* Dans les différentes zones de saisie, vous pouvez saisir des identifiants différents en fonction du type de capteur (0 => pas de création du capteur). Ils seront au final associés au capteur de communication. Vous pouvez également obtenir la liste des capteurs en cliquant sur "Liste des capteurs". Le champ "type" affiche les capteurs disponibles associé au périphérique. (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
+
+![Liste des capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/liste-capteurs.png)
+
+* **Communication** : Information de l'état de la communication du capteur. [Identifiant Obligatoire]
+* **Batterie** : Pourcentage de la batterie.
+* **Température** :  Capteur de température.
+* **Humidité** :  Capteur du taux d'humidité.
+* **Pression** :  Capteur de pression atmosphérique.
+* **Luminosité** :  Capteur de luminosité.
+* **Détecteur de mouvement** :  Capteur de mouvement (0 - aucun mouvement, 100 - mouvement).
+* **Détecteur d'ouverture** :  Capteur d'ouverture (0 - fermé, 100 - ouvert).
+* **Fréquence d'actualisation** :  Permet de fixer le temps de rafraichement des valeurs du périphérique (en minutes).
+
+## Périphériques crées en fonction de votre sélection : 
+
+![capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/capteurs.png)
+
+## Périphériques testés 
+
+* Ikea - Tradfri Détecteur de mouvement 
+* Xiaomi - Aqara Capteur de température, humidité, pression
+* Xiaomi - Aqara Détecteur d'ouverture de porte/fenêtre (+ température)
+* Xiaomi - Aqara Détecteur de mouvement + luminosité (+ température)
 
 ## Remarques 
-La mise en place d'un push vers l'eedomus via un autre systÃ¨me (ex Domoticz, Node-RED...) connectÃ© au webservice de deCONZ permet d'obtenir les changements d'etat en temps rÃ©Ã¨l.
+
+* La mise en place d'un push vers l'eedomus via un autre système (ex Domoticz, Node-RED...) connecté au webservice de deCONZ permet d'obtenir les changements d'état en temps réel.
+
+## Sources et historique des versions
+
+* [Sources](https://github.com/2bprog/eedomus-deconzcap-plugin)
+* [Historique des versions](https://github.com/2bprog/eedomus-deconzcap-plugin/blob/master/CHANGELOG.md)
+
+## Liens 
+
+* <https://phoscon.de/en/conbee2/install>
+* <https://dresden-elektronik.github.io/deconz-rest-doc/>
+* <https://github.com/Smanar/Domoticz-deCONZ>
