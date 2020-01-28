@@ -1,7 +1,6 @@
 ## ENCOURS
 
 * Ajout périphérique de type télécommande
-* mise à jour de l'indicateur de batterie sur les capteurs
 * Mise a jour de l'indicateur de batterie eedomus 
 * Modification de la fréquence d'actualisation à 15min
 
