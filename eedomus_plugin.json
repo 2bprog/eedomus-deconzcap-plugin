@@ -1,6 +1,6 @@
 {
 	"plugin_id": "bbdeconzcap",
-	"name_fr": "Capteurs - deConz",
+	"name_fr": "deCONZ - Capteurs",
 	"icon": "deconzcap.png",
 	"version": "0.0.3",
 	"creation_date": "2019-12-23",
@@ -103,6 +103,13 @@
 			"field": "style: 'margin-bottom: 10px;', minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
 		},		
 		{
+			"parameter": "DZTELID",
+			"description": "Télécommande (1)",
+			"xtype": "numberfield",
+			"default_value": "0",
+			"field": "style: 'margin-bottom: 10px;', minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
+		},		
+		{
 			"parameter": "DZOPTIONS",
 			"description": "<b>Options :</b>",			
             "xtype": "displayfield",
@@ -112,7 +119,7 @@
 			"parameter": "DZFREQ",
 			"description": "Fréquence d'actualisation (min)",
 			"xtype": "numberfield",
-			"default_value": "10",
+			"default_value": "15",
 			"field": "style: 'margin-bottom: 10px;', minValue:0, maxValue:1000 ,allowDecimals:false, width:60, allowBlank:false"
 		},
 		{		
@@ -268,6 +275,34 @@
 			},
 			"values": [	{ "value": "0", 	"description": "Fermé", 	"icon": "windows_closed.png","icon2b":"fenetre01_ferme.png" },
 						{ "value": "100",	"description": "Ouvert",	"icon": "windows_open.png","icon2b":"fenetre01_ouvert.png"	} ]
+		},		
+{	"device_id": "decztel", 		"parent_id": "deczacc",		"create": "plugin.parameters.DZOUVID!=0",
+			"module_id": "51",
+			"type": "http",
+			"name_fr": "Télécommande plugin.name",			
+			"utilisation_id": "35",			
+			"parameters": {
+				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
+				"VAR2": "",
+				"VAR3": "",
+				"value_type": "list",
+				"ignore_errors": 3,
+				"RAW_URL": "http://localhost/script/?exec=2B_deconz.php&vars=[VAR1],plugin.parameters.DZTELID&action=GET",
+				"RAW_XPATH": "//e_self",
+				"POLLING": "plugin.parameters.DZFREQ",
+				"CONVERT": "0"
+			},
+			"values": [	{ "value": "0", 	"description": "N/A" 	 },
+						{ "value": "10", 	"description": "Valeur 10" 	 },
+						{ "value": "20", 	"description": "Valeur 20" 	 },
+						{ "value": "30", 	"description": "Valeur 30" 	 },
+						{ "value": "40", 	"description": "Valeur 40" 	 },
+						{ "value": "50", 	"description": "Valeur 50" 	 },
+						{ "value": "60", 	"description": "Valeur 60" 	 },
+						{ "value": "70", 	"description": "Valeur 70" 	 },
+						{ "value": "80", 	"description": "Valeur 80" 	 },
+						{ "value": "90", 	"description": "Valeur 90" 	 },
+						{ "value": "100",	"description": "Ouvert"	} ]
 		},		
 		{	"device_id": "deczbat",			"parent_id": "deczacc",		"create": "plugin.parameters.DZBATID!=0",
 			"module_id": "51",
