@@ -1,5 +1,6 @@
 ## ENCOURS
 
+* TODO Ajout d'un widget pour afficher la liste des capteurs
 * Ajout périphérique de type télécommande
 * Mise a jour de l'indicateur de batterie eedomus 
 * Modification de la fréquence d'actualisation à 15min
