@@ -19,15 +19,15 @@ Ce plugin eedomus permet de lire les valeurs des capteurs configurés dans deCONZ
 ## Installation
 Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store eedomus" / "Capteurs - deConz" / "Créer"
 
-![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config1-0.0.4.png)
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config1-0.0.3.png)
 
 ## Champs à configurer : 
 
-![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config2-0.0.4.png)
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config2-0.0.3.png)
 
 ### IP + Port
-* Adresse IP et port du serveur. Vous pouvez également cliquer sur "Recherche de serveur deCONZ" pour afficher une fenêtre avec la liste des serveurs deCONZ présent sur votre réseau.
-* Vous pouvez également enregistrer l'ip et le port puis les charger lors d'une utilisation ultérieure.
+* Adresse IP et port du serveur. Vous pouvez également enregistrer l'ip et le port puis les charger lors d'une utilisation ultérieure.
+* Vous pouvez cliquer sur "Recherche de serveur deCONZ" pour afficher une fenêtre avec la liste des serveurs deCONZ présent sur votre réseau.
 
 ![Recherche de serveur](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/serveur.png)
 
@@ -49,11 +49,11 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 
 ### Identifiants
 
-![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config3-0.0.4.png)
+![Configuration capteur deCONZ](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/deconzcap-config3-0.0.3.png)
 
 * Dans les différentes zones de saisie, vous pouvez saisir des identifiants différents en fonction du type de capteur (0 => pas de création du capteur). Ils seront au final associés au capteur de communication. Vous pouvez également obtenir la liste des capteurs en cliquant sur "Liste des capteurs". Le champ "type" affiche les capteurs disponibles associé au périphérique. (Les paramètres IP + Port et Clef API doivent préalablement être renseignés)
 
-![Liste des capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/liste-capteurs.png)
+![Liste des capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/liste-capteurs-0.0.3.png)
 
 * **Communication** : Information de l'état de la communication du capteur. [Identifiant Obligatoire]
 * **Batterie** : Pourcentage de la batterie.
@@ -66,12 +66,11 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 * **Télélecommande (1)** : Boutons de télécommande (fonctionne seulement avec le plugin )
 * **Tête Thermostatique** : Consigne de température, Ouverture de la vanne, mode du thermostat
 * **Personnalisé** : en utilisant un xpath (exemple pour un detecteur de mouvement Ikea : //dark)
-
 * **Fréquence d'actualisation** :  Permet de fixer le temps de rafraichement des valeurs du périphérique (en minutes).
 
 ## Périphériques crées en fonction de votre sélection : 
 
-![capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/capteurs-0.0.4.png)
+![capteurs](https://raw.githubusercontent.com/2bprog/eedomus-deconzcap-plugin/master/doc/capteurs-0.0.3.png)
 
 ## Périphériques testés 
 
@@ -101,9 +100,9 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 
 ## Liens 
 
-* [Plugin deCONZ- Capteurs](https://forum.eedomus.com/viewtopic.php?f=50&t=9238)
-* [Plugin deCONZ- Actionneurs](https://forum.eedomus.com/viewtopic.php?f=50&t=9236)
-* [Plugin Domoticz - Events](https://forum.eedomus.com/viewtopic.php?f=50&t=9274)
+* [Forum deCONZ- Capteurs](https://forum.eedomus.com/viewtopic.php?f=50&t=9238)
+* [Forum deCONZ- Actionneurs](https://forum.eedomus.com/viewtopic.php?f=50&t=9236)
+* [Forum Domoticz - Events](https://forum.eedomus.com/viewtopic.php?f=50&t=9274)
 * <https://phoscon.de/en/conbee2/install>
 * <https://dresden-elektronik.github.io/deconz-rest-doc/>
 * <https://github.com/Smanar/Domoticz-deCONZ>
