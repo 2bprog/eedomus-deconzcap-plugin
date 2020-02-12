@@ -63,7 +63,7 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 * **Luminosité** :  Capteur de luminosité.
 * **Détecteur de mouvement** :  Capteur de mouvement (0 - aucun mouvement, 100 - mouvement).
 * **Détecteur d'ouverture** :  Capteur d'ouverture (0 - fermé, 100 - ouvert).
-* **Télélecommande (1)** : Boutons de télécommande (fonctionne seulement avec le plugin )
+* **Télélecommande (1)** : Boutons de télécommande (fonctionne seulement avec le plugin [Domoticz - Events](https://forum.eedomus.com/viewtopic.php?f=50&t=9274))
 * **Tête Thermostatique** : Consigne de température, Ouverture de la vanne, mode du thermostat
 * **Personnalisé** : en utilisant un xpath (exemple pour un detecteur de mouvement Ikea : //dark)
 * **Fréquence d'actualisation** :  Permet de fixer le temps de rafraichement des valeurs du périphérique (en minutes).
@@ -89,7 +89,6 @@ Cliquez sur "Configuration" / "Ajouter ou supprimer un périphérique" / "Store ee
 ## Remarques 
 
 * La mise en place d'un push vers l'eedomus via un autre système (ex Domoticz, Node-RED...) connecté au webservice de deCONZ permet d'obtenir les changements d'état en temps réel.
-* (1)
 * Si vous utiliser Domoticz, vous pouvez utiliser le plugin [Domoticz - Events](https://forum.eedomus.com/viewtopic.php?f=50&t=9274) pour envoyer les changements de valeur dans l'Eedomus.
 
 
