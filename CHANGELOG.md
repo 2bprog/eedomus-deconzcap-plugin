@@ -1,4 +1,4 @@
-## ENCOURS
+## v0.0.3-beta (12/02/2020)
 
 * Ajout périphérique de type télécommande
 * Ajout périphérique de type Tête thermostatique
