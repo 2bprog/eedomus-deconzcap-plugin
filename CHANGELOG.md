@@ -1,14 +1,12 @@
 ## ENCOURS
 
-* TODO Ajout d'un widget pour afficher la liste des capteurs
-* TODO Ajout lien pour lire XML dans la liste
-* TODO Ajout lien pour tester le xpath
-* TODO Chargement / Enregistrement IP:Port et Clef API
-* Ajout périphérique de type Tête thermostatique
 * Ajout périphérique de type télécommande
+* Ajout périphérique de type Tête thermostatique
 * Ajout périphérique personalisé avec saisie du xpath
+* Chargement / Enregistrement IP:Port et Clef API
 * Mise a jour de l'indicateur de batterie eedomus 
 * Modification de la fréquence d'actualisation à 15min
+* Modification du nom des fichiers php
 
 ## v0.0.2-beta (15/01/2020)
 
