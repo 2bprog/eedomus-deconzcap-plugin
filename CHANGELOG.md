@@ -1,3 +1,7 @@
+## v0.0.4-beta (12/02/2020)
+
+* Correction des liens http Tête Thermostatique
+
 ## v0.0.3-beta (12/02/2020)
 
 * Ajout périphérique de type télécommande
