@@ -1,3 +1,9 @@
+## v0.0.5-beta (13/02/2020)
+
+* Correction du lien Recherche serveur
+* Correction du lien Obtenir Clef API
+* Modification de l'usage pour le mode de la tête Thermostatique
+
 ## v0.0.4-beta (12/02/2020)
 
 * Correction des liens http Tête Thermostatique

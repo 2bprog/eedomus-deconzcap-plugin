@@ -2,11 +2,11 @@
 	"plugin_id": "bbdzcap",
 	"name_fr": "deCONZ - Capteurs",
 	"icon": "deconzcap.png",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"creation_date": "2019-12-23",
-	"modification_date": "2020-02-12",
+	"modification_date": "2020-02-13",
 	"author": "Benjamin B.<br><a target='_blank' href='https://github.com/2bprog/eedomus-deconzcap-plugin'>Sources sur github <img src='/img/external.png'></a>",
-	"description_fr": "<b>Création d'un périphérique deCONZ de type Capteur : </b><br><br>Température, Humidité, Pression, Luminosité, Détection de mouvement, Détection d'ouverture, Etat de la batterie (+ interne eedomus), Etat de la communication. Etat Télécommande<br><br>Si vous utiliser Domoticz, vous pouvez utiliser le plugin <a target='_blank' href='https://forum.eedomus.com/viewtopic.php?f=50&t=9274'>Domoticz - Events</a> pour envoyer les changements de valeur dans l'Eedomus.<br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee.",
+	"description_fr": "<b>Création d'un périphérique deCONZ de type Capteur : </b><br><br>Température, Humidité, Pression, Luminosité, Détection de mouvement, Détection d'ouverture, Etat de la batterie (+ interne eedomus), <br>Etat de la communication. Etat Télécommande, Tête thermostatique, Périphérique personalisé<br><br>Si vous utiliser Domoticz, vous pouvez utiliser le plugin <a target='_blank' href='https://forum.eedomus.com/viewtopic.php?f=50&t=9274'>Domoticz - Events</a> pour envoyer les changements de valeur dans l'Eedomus.<br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee.",
 	"description_en": "",
 	"description_es": "",
 	"description_it": "",
@@ -17,7 +17,7 @@
 			"parameter": "DZCONFIG",
 			"description": "<b>Configuration :</b>",
             "xtype": "displayfield",			
-			"field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=discover&p2=html),\"deconz\",\"width=1024,height=600,toolbar=no\");\\'>Recherche de serveur</a><br><a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=load&item=ip\"),\"ip load\",\"width=600,height=200,toolbar=no\");\\'>Charger</a> / <a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=save&item=ip&ip=\" + document.getElementById(\"periph_param[`DZIP`]\").value),\"ip save\",\"width=600,height=200,toolbar=no\");\\'>Enregistrer</a>'"		
+			"field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=discover&p2=html\"),\"recherche serveur\",\"width=700,height=300,toolbar=no\");\\'>Recherche de serveur</a><br><a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=load&item=ip\"),\"ip load\",\"width=600,height=200,toolbar=no\");\\'>Charger</a> / <a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=save&item=ip&ip=\" + document.getElementById(\"periph_param[`DZIP`]\").value),\"ip save\",\"width=600,height=200,toolbar=no\");\\'>Enregistrer</a>'"		
 		},		
 		{		
 			"parameter": "DZIP",
@@ -31,7 +31,7 @@
 			"parameter": "DZAPIKEYCR",
 			"description": "Clef API deCONZ ",			
             "xtype": "displayfield",
-           "field": "style: 'padding-top: 3px;', value: 'Pour l\\'obtenir : Connectez vous à <b>Phoscon-GW</b>, puis allez dans <b>Settings/Gateway/Advanced</b>,<br> cliquez sur <b>Authenticate app</b>, ensuite <a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&ip=\"+document.getElementById(\"periph_param[`DZIP`]\").value+\"&cmd=api&p2=html),\"Liste\",\"width=600,height=200,toolbar=no\");\\'>cliquez ici</a><br><a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=load&item=key\"),\"key load\",\"width=600,height=200,toolbar=no\");\\'>Charger</a> / <a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=save&item=key&key=\" + document.getElementById(\"periph_param[`DZAPIKEY`]\").value),\"key save\",\"width=600,height=200,toolbar=no\");\\'>Enregistrer</a>'"			
+           "field": "style: 'padding-top: 3px;', value: 'Pour l\\'obtenir : Connectez vous à <b>Phoscon-GW</b>, puis allez dans <b>Settings/Gateway/Advanced</b>,<br> cliquez sur <b>Authenticate app</b>, ensuite <a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&ip=\"+document.getElementById(\"periph_param[`DZIP`]\").value+\"&cmd=api&p2=html\"),\"Api\",\"width=600,height=200,toolbar=no\");\\'>cliquez ici</a><br><a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=load&item=key\"),\"key load\",\"width=600,height=200,toolbar=no\");\\'>Charger</a> / <a href=\\'javascript:window.open(\"/box_http_query.php?controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue()+\"&url=\"+encodeURIComponent(\"http://localhost/script/?exec=2B_dzcaplst.php&cmd=save&item=key&key=\" + document.getElementById(\"periph_param[`DZAPIKEY`]\").value),\"key save\",\"width=600,height=200,toolbar=no\");\\'>Enregistrer</a>'"			
 		},
 		{
 			"parameter": "DZAPIKEY",
@@ -45,7 +45,7 @@
 			"parameter": "DZIDLIST",
 			"description": "<b>Identifiants :</b>",			
             "xtype": "displayfield",
-            "field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:window.open(\"/script_proxy/?exec=2B_dzcaplst.php&ip=\"+document.getElementById(\"periph_param[`DZIP`]\").value+\"&key=\"+document.getElementById(\"periph_param[`DZAPIKEY`]\").value+\"&cmd=list&p1=sensors&p2=html&controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue(),\"deconz\",\"width=800,height=600,toolbar=no\");\\'>Liste des capteurs</a>'"			
+            "field": "style: 'padding-top: 3px;', value: '<a href=\\'javascript:window.open(\"/script_proxy/?exec=2B_dzcaplst.php&ip=\"+document.getElementById(\"periph_param[`DZIP`]\").value+\"&key=\"+document.getElementById(\"periph_param[`DZAPIKEY`]\").value+\"&cmd=list&p1=sensors&p2=html&controller_id=\"+Ext.getCmp(\"attached_controller_id\").getValue(),\"Liste\",\"width=1024,height=600,toolbar=no\");\\'>Liste des capteurs</a>'"			
 		},
 		{
 			"parameter": "DZCOMID",
@@ -155,7 +155,7 @@
 			"parameter": "DZREM1",
 			"description": "<b>Remarque :</b>",			
             "xtype": "displayfield",
-            "field": "value: '* La mise en place d\\'un push vers l\\'eedomus via un autre système (ex Domoticz, Node-RED...) connecté au webservice de deCONZ permet d\\'obtenir les changements d\\'etat en temps réèl.<br> (1) Ce périphérique ne fonctionne qu\\'avec la mise en place d\\'un push <br><br> Si vous utiliser Domoticz, vous pouvez utiliser le plugin <a target=\\'_blank\\' href=\\'https://forum.eedomus.com/viewtopic.php?f=50&t=9274\\'>Domoticz - Events</a> pour envoyer les changements de valeur dans l\\'Eedomus.'"			
+            "field": "value: '* La mise en place d\\'un push vers l\\'eedomus via un autre système (ex Domoticz, Node-RED...) connecté au webservice de deCONZ permet d\\'obtenir les changements d\\'etat en temps réèl.<br> (1) Ce périphérique ne fonctionne qu\\'avec la mise en place d\\'un push <br><br> Si vous utilisez Domoticz, vous pouvez utiliser le plugin <a target=\\'_blank\\' href=\\'https://forum.eedomus.com/viewtopic.php?f=50&t=9274\\'>Domoticz - Events</a> pour envoyer les changements de valeur dans l\\'Eedomus.'"			
 		}
 
 	],
@@ -377,7 +377,7 @@
 			"type": "http",
 			"name_fr": "Mode plugin.name",
 			"icon": "chauffage.png","icon2b": "spirit_dzcap.png",
-			"utilisation_id": "43",			
+			"utilisation_id": "115",			
 			"parameters": {
 				"VAR1": "plugin.parameters.DZIP,plugin.parameters.DZAPIKEY,sensors",
 				"VAR2": "",
