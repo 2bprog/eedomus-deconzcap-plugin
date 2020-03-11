@@ -2,9 +2,9 @@
 	"plugin_id": "bbdzcap",
 	"name_fr": "deCONZ - Capteurs",
 	"icon": "deconzcap.png",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"creation_date": "2019-12-23",
-	"modification_date": "2020-02-13",
+	"modification_date": "2020-02-19",
 	"author": "Benj70b<br><a target='_blank' href='https://github.com/2bprog/eedomus-deconzcap-plugin'>Sources sur github <img src='/img/external.png'></a>",
 	"description_fr": "<b>Création d'un périphérique deCONZ de type Capteur : </b><br><br>Température, Humidité, Pression, Luminosité, Détection de mouvement, Détection d'ouverture, Etat de la batterie (+ interne eedomus), <br>Etat de la communication. Etat Télécommande, Tête thermostatique, Périphérique personalisé<br><br>Si vous utiliser Domoticz, vous pouvez utiliser le plugin <a target='_blank' href='https://forum.eedomus.com/viewtopic.php?f=50&t=9274'>Domoticz - Events</a> pour envoyer les changements de valeur dans l'Eedomus.<br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee.",
 	"description_en": "",
@@ -367,7 +367,7 @@
 				"value_type": "float",
 				"ignore_errors": 3,
 				"RAW_URL": "http://localhost/script/?exec=2B_dzcap.php&vars=[VAR1],plugin.parameters.DZTETHERM&action=GET",
-				"RAW_XPATH": "//valve",
+				"RAW_XPATH": "floor(//valve div 2.55)",
 				"POLLING": "plugin.parameters.DZFREQ",
 				"CONVERT": "0"
 			}
