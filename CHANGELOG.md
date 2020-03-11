@@ -1,3 +1,7 @@
+## v0.0.6-beta (XX/02/2020)
+
+* Correction du xpath pour la lecture de la valve
+
 ## v0.0.5-beta (13/02/2020)
 
 * Correction du lien Recherche serveur
