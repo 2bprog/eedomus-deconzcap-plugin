@@ -4,7 +4,7 @@
 	"icon": "deconzcap.png",
 	"version": "0.0.6",
 	"creation_date": "2019-12-23",
-	"modification_date": "2020-02-19",
+	"modification_date": "2020-09-03",
 	"author": "Benj70b<br><a target='_blank' href='https://github.com/2bprog/eedomus-deconzcap-plugin'>Sources sur github <img src='/img/external.png'></a>",
 	"description_fr": "<b>Création d'un périphérique deCONZ de type Capteur : </b><br><br>Température, Humidité, Pression, Luminosité, Détection de mouvement, Détection d'ouverture, Etat de la batterie (+ interne eedomus), <br>Etat de la communication. Etat Télécommande, Tête thermostatique, Périphérique personalisé<br><br>Si vous utiliser Domoticz, vous pouvez utiliser le plugin <a target='_blank' href='https://forum.eedomus.com/viewtopic.php?f=50&t=9274'>Domoticz - Events</a> pour envoyer les changements de valeur dans l'Eedomus.<br>deCONZ est l'application de dresden elektronik qui gère les clefs zigbee ConBee, ConBee II et RaspBee.",
 	"description_en": "",

@@ -1,6 +1,7 @@
-## v0.0.6-beta (XX/02/2020)
+## v0.0.6-beta (03/09/2020)
 
 * Correction du xpath pour la lecture de la valve
+* Modification dans la gestion de l'indicateur de batterie eedomus
 
 ## v0.0.5-beta (13/02/2020)
 
