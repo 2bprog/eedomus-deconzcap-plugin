@@ -1,7 +1,7 @@
 # script eedomus-deconzcap-plugin
 
 $zip = ".\release\deconzcap.zip"  
-
+$version = "v0.0.6"
 
 $scriptpath = $MyInvocation.MyCommand.Path
 $dir = Split-Path $scriptpath
@@ -20,6 +20,12 @@ if (Test-Path $zip) {  Remove-Item $zip }
 Copy-Item -Path "..\img\*.png" -Destination ".\tmp\img\" -Force
 Copy-Item -Path "..\php\2B_deconz.php" -Destination ".\tmp\2B_dzcap.php" -Force
 Copy-Item -Path "..\php\2B_deconzlist.php" -Destination ".\tmp\2B_dzcaplst.php" -Force
+
+((Get-Content -path .\tmp\2B_dzcap.php -Raw) -replace '#2B_deconz#', '2B_dzcap' ) | Set-Content -Path .\tmp\2B_dzcap.php
+((Get-Content -path .\tmp\2B_dzcap.php -Raw) -replace '#version#', $version ) | Set-Content -Path .\tmp\2B_dzcap.php
+((Get-Content -path .\tmp\2B_dzcaplst.php -Raw) -replace '#2B_deconzlist#', '2B_dzcaplst' ) | Set-Content -Path .\tmp\2B_dzcaplst.php
+((Get-Content -path .\tmp\2B_dzcaplst.php -Raw) -replace '#version#', $version ) | Set-Content -Path .\tmp\2B_dzcaplst.php
+
 Copy-Item "..\eedomus_plugin.json" -Destination ".\tmp" -Force
 Copy-Item "..\readme.md" -Destination ".\tmp\readme_fr.md" -Force
 
