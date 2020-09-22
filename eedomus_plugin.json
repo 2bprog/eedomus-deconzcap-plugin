@@ -110,7 +110,7 @@
 		},		
 		{
 			"parameter": "DZTETHERM",
-			"description": "Tête Thermostatique",
+			"description": "Tête Thermostatique (Spirit)",
 			"xtype": "numberfield",
 			"default_value": "0",
 			"field": "style: 'margin-bottom: 10px;', minValue:0, maxValue:65535 ,allowDecimals:false, width:60, allowBlank:false"			
@@ -389,7 +389,7 @@
 			},
 				"values": [
 					{ "value": "auto",  "description": "Consigne",  "http_url": "http://localhost/script/?exec=2B_dzcap.php&vars=[VAR1],plugin.parameters.DZTETHERM&action=PUT&json={\"mode\": \"[RAW_VALUE]\", \"on\":true }", "http_type": "GET", "icon": "chauffage64.png","icon2b": "spirit_consigne.png" },
-					{ "value": "boost",	"description": "Boost",	   	"http_url": "http://localhost/script/?exec=2B_dzcap.php&vars=[VAR1],plugin.parameters.DZTETHERM&action=PUT&json={\"mode\": \"[RAW_VALUE]\", \"on\":true }", "http_type": "GET", "icon": "chauffage_b1.png","icon2b": "spirit_boost.png" },
+					{ "value": "heat",	"description": "Boost",	   	"http_url": "http://localhost/script/?exec=2B_dzcap.php&vars=[VAR1],plugin.parameters.DZTETHERM&action=PUT&json={\"mode\": \"[RAW_VALUE]\", \"on\":true }", "http_type": "GET", "icon": "chauffage_b1.png","icon2b": "spirit_boost.png" },
 					{ "value": "off",	"description": "Arrêt",		"http_url": "http://localhost/script/?exec=2B_dzcap.php&vars=[VAR1],plugin.parameters.DZTETHERM&action=PUT&json={\"mode\": \"[RAW_VALUE]\", \"on\":false }", "http_type": "GET", "icon": "chauffage_b2.png","icon2b": "spirit_Arret.png" }
 			]
 		},		
