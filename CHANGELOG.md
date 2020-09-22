@@ -1,3 +1,9 @@
+## v0.0.X-beta
+
+* Modification de certains libellés
+* Modification de la liste des consignes thermostatique
+* Correction pour les modes thermostatique
+
 ## v0.0.6-beta (03/09/2020)
 
 * Correction du xpath pour la lecture de la valve
